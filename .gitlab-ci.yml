@@ -1,0 +1,10 @@
+image : node:latest
+
+stages:
+  - cypress-test-run
+
+cypress-test-prod:
+  stage: cypress-test-run
+  script:
+       - npm install cypress
+       - npx cypress run --record --key 62bcbf8a-ab60-40ff-aa6f-f755ade860d4
